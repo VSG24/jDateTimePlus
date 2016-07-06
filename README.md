@@ -1,22 +1,19 @@
-UNMAINTAINED
-===
-:warning: This package is deprecated and unmaintained. Please **DO NOT** use it in production unless it’s absolutely necessary and at your own risk. There are several other modern Shamsi/Jalali date packages out there like [this one](http://farhadi.ir/blog/1389/02/10/persian-calendar-for-php-53/) which you can use.
-
-:round_pushpin: If you happen to be a php developer and want to maintain this project, please give me a shout so I can give you write access to this project.
-
-#jDateTime
+#jDateTimePlus
 
 PHP class to convert dates from Gregorian calendar system to Jalali calendar system and vice versa. Supports dates beyond 2038.  
-Jalali, also known as Shamsi or Hijri Shamsi is the Iranian calendar system.  
-[![Build Status](https://travis-ci.org/sallar/jDateTime.png?branch=master)](https://travis-ci.org/sallar/jDateTime)
+Jalali, also known as Shamsi or Hijri Shamsi is the Iranian calendar system.
 
-#About v2.2.0
+#About this class
+
+`jDateTimePlus` 1.0.0 is based on `jDateTime` 2.2.0
+
+This package is a fork based on jDateTime by Sallar Kaboli. In this fork, I replaced Jalali to Gregorian and vice versa methods with new ones based on jdf 2.60. Also replaced the `mktime` method with a new one because the older version gave wrong results. I also fixed some of the phpdocs and introduced new methods. This package is best used with a higher abstraction such as `EasyDateTime`.
 
 PHP's default `date` function does not support years higher than 2038, so the `DateTime` class was introduced in PHP5 to solve this problem and provide more sophisticated date methods. Iranian users have been using an old `jdate` function to convert Gregorian date to the Jalali equivalent, which is completely based on the old php `date` function so its pretty much out-dated. 
 
 #Requirements
 
-jDateTime Requires **PHP >= 5.2**  
+Unlike jDateTime, jDateTimePlus Requires **PHP >= 5.4**
 
 #Installation
 
@@ -54,19 +51,17 @@ require_once 'path/to/source/jdatetime.class.php';
 Please see [examples.php](examples.php) and [example-static.php](examples-static.php) for working examples.
 
 #Contributors:
-- [Sallar Kaboli](http://sallar.me)  
-- [Omid Pilevar](http://pilevar.ir)
-- [Afshin Mehrabani](http://afshinm.name)  
-- [Amir Latifi](http://amiir.me)
-- [Ruhollah Namjoo](https://github.com/namjoo)
+- [Vahid Amiri Motlagh](http://atvsg.com)
+- [Sallar Kaboli](http://sallar.me)
 
 ##License
-jDateTime was created by [Sallar Kaboli](http://sallar.me) and released under the [MIT License](http://opensource.org/licenses/mit-license.php).
+jDateTimePlus was created by [Vahid Amiri Motlagh](http://atvsg.com) and released under the [MIT License](http://opensource.org/licenses/mit-license.php).
 
-Copyright (C) 2016 [Sallar Kaboli](http://sallar.me)  
+Copyright (C) 2016 [Vahid Amiri Motlagh](http://atvsg.com)
   
-Original Jalali to Gregorian (and vice versa) convertor:  
-Copyright (C) 2000  Roozbeh Pournader and Mohammad Toossi
+ Original Jalali to Gregorian (and vice versa) methods from "jdf 2.60" package:
+ Copyright (C) 2015, Reza Gholampanahi
+ http://jdf.scr.ir
 
     The MIT License (MIT)
     

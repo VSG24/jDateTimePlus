@@ -1,28 +1,25 @@
 {
-    "name": "sallar/jdatetime",
+    "name": "vsg24/jdatetimeplus",
     "type": "library",
-    "description": "Jalali (Shamsi) DateTime class written in PHP, Supports year higher than 2038",
+    "description": "Jalali (Shamsi) DateTime class written in PHP, Supports year higher than 2038. Updated in 2016.",
     "keywords": ["date", "datetime", "jalali", "jalalidate", "jdatetime","shamsi","iran","farsi","persian","time"],
-    "homepage": "http://sallar.me/projects/jdatetime/",
+    "homepage": "https://vsg24.github.io/jDateTimePlus/",
     "license": "MIT",
     "authors": [
         {
-            "name": "Sallar Kaboli",
-            "email": "sallar.kaboli@gmail.com",
-            "homepage": "http://sallar.me",
+            "name": "Vahid Amiri Motlagh",
+            "email": "vahid.a1996@gmail.com",
+            "homepage": "http://atvsg.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=5.2.0"
+        "php": ">=5.4.0"
     },
     "autoload": {
         "classmap": [
-            "jdatetime.class.php"
+            "jdatetimeplus.class.php"
         ]
     },
-    "minimum-stability": "dev",
-    "require-dev": {
-        "phpunit/phpunit": "^5.2"
-    }
+    "minimum-stability": "dev"
 }
