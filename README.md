@@ -7,7 +7,7 @@ Jalali, also known as Shamsi or Hijri Shamsi is the Iranian calendar system.
 
 `jDateTimePlus` 1.0.0 is based on `jDateTime` 2.2.0
 
-This package is a fork based on jDateTime by Sallar Kaboli. In this fork, I replaced Jalali to Gregorian and vice versa methods with new ones based on jdf 2.60. Also replaced the `mktime` method with a new one because the older version gave wrong results. I also fixed some of the phpdocs and introduced new methods. This package is best used with a higher abstraction such as `EasyDateTime`.
+This package is a fork based on jDateTime by Sallar Kaboli. In this fork, I replaced Jalali to Gregorian and vice versa methods with new ones based on jdf 2.60. Also replaced the `mktime` method with a new one because the older version gave wrong results. I also fixed some of the phpdocs and introduced new methods. This package is best used with a higher abstraction such as <a href="https://github.com/VSG24/EasyDateTime">`EasyDateTime`</a>.
 
 PHP's default `date` function does not support years higher than 2038, so the `DateTime` class was introduced in PHP5 to solve this problem and provide more sophisticated date methods. Iranian users have been using an old `jdate` function to convert Gregorian date to the Jalali equivalent, which is completely based on the old php `date` function so its pretty much out-dated. 
 
@@ -23,14 +23,14 @@ You can install this package using [composer](https://getcomposer.org). Add this
 
 ```
 "require": {
-	"sallar/jdatetime": "dev-master"
+	"vsg24/jdatetimeplus": "dev-master"
 }
 ```
 
 or if you prefer command line, change directory to project root and:
 
 ```
-php composer.phar require "sallar/jdatetime":"dev-master"
+php composer.phar require "vsg24/jdatetimeplus":"dev-master"
 ```
 
 ##Manual Installation
@@ -43,7 +43,7 @@ Get a copy of package source code. You can do this in two ways:
 After getting a copy of source code, it is enough to include `jdatetime.class.php` where you need to use it.
 
 ```php
-require_once 'path/to/source/jdatetime.class.php';
+require_once 'path/to/source/jdatetimeplus.class.php';
 ```
 
 #Examples
