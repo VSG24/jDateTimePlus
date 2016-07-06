@@ -38,7 +38,7 @@ php composer.phar require "vsg24/jdatetimeplus":"dev-master"
 Get a copy of package source code. You can do this in two ways:
 
 1. Download ZIP version of the source code and unzip it in desired location  
-2. Run `git clone https://github.com/sallar/jDateTime.git` to clone this repository  
+2. Run `git clone https://github.com/VSG24/jDateTimePlus.git` to clone this repository  
 
 After getting a copy of source code, it is enough to include `jdatetime.class.php` where you need to use it.
 
