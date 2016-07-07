@@ -1,105 +1,160 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
 
-  <title>sallar/jDateTime @ GitHub</title>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Jdatetimeplus : Jalali DateTime Class for PHP + More!">
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #353129;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #caced6; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #caced6; }
-    h3 { text-align: center; color: #caced6; }
-    a { color: #caced6; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-<body>
-  <a href="https://github.com/sallar/jDateTime"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+    <title>Jdatetimeplus</title>
+  </head>
 
-  <div id="container">
+  <body>
 
-    <div class="download">
-      <a href="https://github.com/sallar/jDateTime/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/sallar/jDateTime/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/VSG24/jDateTimePlus">View on GitHub</a>
+
+          <h1 id="project_title">Jdatetimeplus</h1>
+          <h2 id="project_tagline">Jalali DateTime Class for PHP + More!</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/VSG24/jDateTimePlus/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/VSG24/jDateTimePlus/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
     </div>
 
-    <h1><a href="https://github.com/sallar/jDateTime">jDateTime</a>
-      <span class="small">by <a href="https://github.com/sallar">sallar</a></span></h1>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="jdatetimeplus" class="anchor" href="#jdatetimeplus" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>jDateTimePlus</h1>
 
-    <div class="description">
-      Jalali DateTime Class for PHP
+<p>PHP class to convert dates from Gregorian calendar system to Jalali calendar system and vice versa. Supports dates beyond 2038.<br>
+Jalali, also known as Shamsi or Hijri Shamsi is the Iranian calendar system.</p>
+
+<h1>
+<a id="about-this-class" class="anchor" href="#about-this-class" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About this class</h1>
+
+<p><code>jDateTimePlus</code> 1.0.0 is based on <code>jDateTime</code> 2.2.0</p>
+
+<p>This package is a fork based on jDateTime by Sallar Kaboli. In this fork, I replaced Jalali to Gregorian and vice versa methods with new ones based on jdf 2.60. Also replaced the <code>mktime</code> method with a new one because the older version gave wrong results. I also fixed some of the phpdocs and introduced new methods. This package is best used with a higher abstraction such as <a href="https://github.com/VSG24/EasyDateTime"><code>EasyDateTime</code></a>.</p>
+
+<p>PHP's default <code>date</code> function does not support years higher than 2038, so the <code>DateTime</code> class was introduced in PHP5 to solve this problem and provide more sophisticated date methods. Iranian users have been using an old <code>jdate</code> function to convert Gregorian date to the Jalali equivalent, which is completely based on the old php <code>date</code> function so its pretty much out-dated. </p>
+
+<h1>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h1>
+
+<p>Unlike jDateTime, jDateTimePlus Requires <strong>PHP &gt;= 5.4</strong></p>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h1>
+
+<h2>
+<a id="using-composer" class="anchor" href="#using-composer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using Composer</h2>
+
+<p>You can install this package using <a href="https://getcomposer.org">composer</a>. Add this package to your <code>composer.json</code>:  </p>
+
+<pre><code>"require": {
+    "vsg24/jdatetimeplus": "dev-master"
+}
+</code></pre>
+
+<p>or if you prefer command line, change directory to project root and:</p>
+
+<pre><code>php composer.phar require "vsg24/jdatetimeplus":"dev-master"
+</code></pre>
+
+<h2>
+<a id="manual-installation" class="anchor" href="#manual-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manual Installation</h2>
+
+<p>Get a copy of package source code. You can do this in two ways:</p>
+
+<ol>
+<li>Download ZIP version of the source code and unzip it in desired location<br>
+</li>
+<li>Run <code>git clone https://github.com/VSG24/jDateTimePlus.git</code> to clone this repository<br>
+</li>
+</ol>
+
+<p>After getting a copy of source code, it is enough to include <code>jdatetime.class.php</code> where you need to use it.</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">require_once</span> <span class="pl-s"><span class="pl-pds">'</span>path/to/source/jdatetimeplus.class.php<span class="pl-pds">'</span></span>;</span></pre></div>
+
+<h1>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h1>
+
+<p>Please see <a href="examples.php">examples.php</a> and <a href="examples-static.php">example-static.php</a> for working examples.</p>
+
+<h1>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributors:</h1>
+
+<ul>
+<li><a href="http://atvsg.com">Vahid Amiri Motlagh</a></li>
+<li><a href="http://sallar.me">Sallar Kaboli</a></li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>jDateTimePlus was created by <a href="http://atvsg.com">Vahid Amiri Motlagh</a> and released under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a>.</p>
+
+<p>Copyright (C) 2016 <a href="http://atvsg.com">Vahid Amiri Motlagh</a></p>
+
+<p>Original Jalali to Gregorian (and vice versa) methods from "jdf 2.60" package:
+ Copyright (C) 2015, Reza Gholampanahi
+ <a href="http://jdf.scr.ir">http://jdf.scr.ir</a></p>
+
+<pre><code>The MIT License (MIT)
+
+Copyright (C) 2016 Vahid Amiri Motlagh
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+1- The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+2- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+</code></pre>
+
+<h1>
+<a id="resources" class="anchor" href="#resources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resources</h1>
+
+<ul>
+<li>
+<a href="http://www.php.net/manual/en/timezones.php">List of supported timezones</a><br>
+</li>
+<li>
+<a href="http://sallar.me/farsi/projects/jdatetime/">Documentation and Instructions in Persian</a><br>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Jdatetimeplus maintained by <a href="https://github.com/VSG24">VSG24</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
 
     
-      <p>PHP's default date function does not support years higher than
-2038. Introduced in PHP5, DateTime class supports higher years
-and also invalid date entries.
-Also, Persian users are using classic jdate function for years now
-and beside the fact that it's amazing and also helped me to write this
-one, it's really out of date, and can't be used in modern real world
-web applications as it is completely written in functions.</p>
-    
 
-    
-      <h2>Dependencies</h2>
-      <p>PHP >= 5.2</p>
-    
-
-    
-      <h2>Install</h2>
-      <p>Include the class file anywhere and create a new instance of it.</p>
-    
-
-    
-      <h2>License</h2>
-      <p>PHP License v3.01</p>
-    
-
-    
-      <h2>Authors</h2>
-      <p>Sallar Kaboli (sallar.kaboli@gmail.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>Sallar Kaboli (sallar.kaboli@gmail.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/sallar/jDateTime/zipball/master">zip</a> or
-      <a href="https://github.com/sallar/jDateTime/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/sallar/jDateTime</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/sallar/jDateTime">sallar/jDateTime</a>
-    </div>
-
-  </div>
-
-</body>
+  </body>
 </html>
